@@ -1,0 +1,165 @@
+<style>
+
+  ion-content{
+  background-image: url('img/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  .spacer{
+    margin-top:40px;
+
+  }
+
+  .logo{
+    padding-top: 20px;
+    height: auto;
+      width: 40%;
+      margin: auto;
+      display: block;
+  }
+
+  .icon{
+    color: #46caa7;
+  }
+
+  .side-padding{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .vertical-padding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .padding-top{
+    padding-top:15px;
+  }
+
+  .padding-left{
+    padding-left: 15px;
+  }
+
+  .padding-right{
+    padding-right: 15px;
+  }
+
+  .padding-bottom{
+    padding-bottom: 15px;
+  }
+
+  .center {
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+      text-align: center;
+  }
+
+  .button-primary{
+    background-color: #46caa7;
+    color: white;
+  }
+
+
+  .headtext{
+    font-size: 15px;
+  }
+
+  .left{
+    float:left;
+  }
+
+  .right{
+    float:right;
+  }
+
+  .text-light{
+    color: white;
+  }
+
+  .text-dark{
+    color:#1e1e1e;
+  }
+
+  .transparent{
+    background-color: transparent !important;
+
+  }
+
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color:#f1f1f1;
+  }
+
+  .row-spacer{
+    padding-top:10px;
+    padding-bottom:5px;
+  }
+
+
+
+</style>
+
+
+
+<ion-header>
+    <ion-navbar color="transparent">
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-row align-items-center>
+     <ion-col>
+       <img class="logo" src="img/cam.png">
+     </ion-col>
+   </ion-row>
+
+
+<ion-grid>
+   <ion-row  class="row-spacer">
+     <ion-col col-6>
+     <ion-item class="side-padding transparent">
+         <ion-input clearInput type="text"  class="text-light" placeholder="First Name" > </ion-input>
+     </ion-item>
+   </ion-col>
+
+   <ion-col col-6>
+     <ion-item class="side-padding transparent">
+         <ion-input clearInput type="text" class="text-light" placeholder="Last Name"></ion-input>
+    </ion-item>
+  </ion-col>
+  </ion-row>
+
+  <ion-row  class="row-spacer">
+    <ion-item class="side-padding transparent">
+        <ion-input clearInput type="text" class="text-light" placeholder="Email Address"></ion-input>
+   </ion-item>
+  </ion-row>
+
+  <ion-row  class="row-spacer">
+    <ion-item class="side-padding transparent">
+        <ion-input clearInput type="password" class="text-light" placeholder="Password"></ion-input>
+   </ion-item>
+  </ion-row>
+
+  <ion-row  class="row-spacer">
+    <ion-item class="side-padding transparent">
+        <ion-input clearInput type="password" class="text-light" placeholder="Repeat Password"></ion-input>
+   </ion-item>
+  </ion-row>
+
+    <ion-row padding class="spacer">
+    <button ion-button block outline class="button" color="light" [navPush]="tutorialPage">SIGNIN</button>
+    </ion-row>
+</ion-grid>
+
+
+
+
+
+
+</ion-content>

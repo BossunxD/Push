@@ -1,0 +1,131 @@
+
+<style>
+
+  ion-content{
+  background-image: url('img/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  .spacer{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .logo{
+    height: auto;
+      width: 60%;
+      margin: auto;
+      display: block;
+  }
+
+  .icon{
+    color: #46caa7;
+  }
+
+  .side-padding{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .vertical-padding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .padding-top{
+    padding-top:15px;
+  }
+
+  .center {
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+      text-align: center;
+  }
+
+  .button-primary{
+    background-color: #46caa7;
+    color: white;
+  }
+
+
+  .headtext{
+    font-size: 15px;
+  }
+
+  .left{
+    float:left;
+  }
+
+  .right{
+    float:right;
+  }
+
+  .text-light{
+    color: white;
+  }
+
+  .text-dark{
+    color:#1e1e1e;
+  }
+
+  .transparent{
+    background-color: transparent !important;
+  }
+
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color:#f1f1f1;
+  }
+
+
+
+</style>
+
+<ion-content  padding>
+
+  <ion-row align-items-center>
+     <ion-col>
+       <img class="logo padding" src="img/PUSH.png">
+     </ion-col>
+   </ion-row>
+
+
+   <div class="vertical-padding">
+     <ion-item class="side-padding transparent">
+         <ion-label> <ion-icon name="contact" class="icon text-light"></ion-icon>
+ </ion-label>
+         <ion-input clearInput type="text"  class="text-light" placeholder="Username" > </ion-input>
+     </ion-item>
+     <ion-item class="side-padding transparent">
+         <ion-label>  <ion-icon name="lock" class="icon text-light"></ion-icon> </ion-label>
+         <ion-input clearInput type="password" class="text-light" placeholder="Password"></ion-input>
+    </ion-item>
+  </div>
+
+    <ion-row class="vertical-padding" padding>
+    <button ion-button block outline class="button" color="light" [navPush]="tabsPage">SIGNIN</button>
+    </ion-row>
+
+
+       <ion-row>
+         <h5 class="center headtext text-light"> OR </h5>
+       </ion-row>
+
+    <ion-row class="vertical-padding" padding>
+      <button ion-button block item-end icon-left>
+       <ion-icon name="logo-facebook" class="text-light"></ion-icon>
+     Login with Facebook
+     </button>
+    </ion-row>
+
+
+<ion-row class=" transparent  ">
+  <ion-item class="transparent" >
+    <button ion-button light-small color="light" class="left" clear [navPush]="registerPage">Create an Account</button>
+      <button ion-button light-small  color="light" class="right" clear>Forgot Password?</button>
+  </ion-item>
+</ion-row>
+
+</ion-content>

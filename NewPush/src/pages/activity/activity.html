@@ -1,0 +1,71 @@
+<style>
+.red-card{
+  border-left-style: solid!important;
+    border-left-color: #e74c3c  ;
+    border-style: none;
+     border-left-width: 7px;
+}
+
+.blue-card{
+  border-left-style: solid!important;
+    border-left-color: #06a8f0;
+    border-style: none;
+     border-left-width: 10px;
+}
+
+.horizontal-padding{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+</style>
+
+
+<ion-header>
+  <ion-navbar color="balanced">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+    <ion-item>
+      <span item-left> <b> Activity Feed </b></span>
+      <button ion-button icon-left clear item-end>
+        <ion-icon name="add-circle"></ion-icon>
+        New Activity
+      </button>
+    </ion-item>
+
+    <hr>
+
+          <ion-card *ngFor="let item of items" class="blue-card" padding>
+            <ion-card-header>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="img/octo.png">
+                </ion-avatar>
+                <h2> {{item.event_name}}</h2>
+                <p>{{item.event_date}}</p>
+              </ion-item>
+            </ion-card-header>
+            <hr>
+            <ion-item>
+               <span item-left>3 days left</span>
+               <button ion-button icon-left clear item-end color="danger" (click)="open($event, item)">
+                 <ion-icon name="trash"></ion-icon>
+                 Clear Activity
+               </button>
+             </ion-item>
+          </ion-card>
+
+
+
+
+
+
+
+  </ion-card>
+
+</ion-content>
